@@ -12,6 +12,7 @@ Minimal Next.js content site for explaining Korean cultural context in K-content
 - Firestore-backed article storage
 - SEO metadata, sitemap, and robots setup
 - Graceful sample-content fallback when Firebase is not configured yet
+- Korean search keyword support through `searchTerms`
 
 ## Setup
 
@@ -47,6 +48,7 @@ Expected document shape:
   "content": "Markdown-like body text",
   "status": "published",
   "tags": ["language", "emotion"],
+  "searchTerms": ["aigoo", "아이고", "감탄사"],
   "metaTitle": "What 'Aigoo' Means in Korean Dramas",
   "metaDescription": "Learn how 'aigoo' works in Korean speech and why subtitles rarely capture the nuance.",
   "featured": true,
@@ -60,3 +62,4 @@ Expected document shape:
 - Public pages read published articles from Firestore when server credentials are present.
 - Without Firebase configuration, the site still renders with bundled sample articles.
 - Admin APIs require a verified Firebase session cookie and an email listed in `ADMIN_EMAILS`.
+- Search checks title, excerpt, content, tags, meta description, and `searchTerms`.

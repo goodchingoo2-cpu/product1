@@ -14,6 +14,7 @@ const emptyArticle = {
   excerpt: "",
   content: "",
   tags: "",
+  searchTerms: "",
   metaTitle: "",
   metaDescription: "",
   status: "draft",
@@ -29,6 +30,9 @@ function normalizeEditorData(article) {
     excerpt: article?.excerpt || "",
     content: article?.content || "",
     tags: Array.isArray(article?.tags) ? article.tags.join(", ") : article?.tags || "",
+    searchTerms: Array.isArray(article?.searchTerms)
+      ? article.searchTerms.join(", ")
+      : article?.searchTerms || "",
     metaTitle: article?.metaTitle || article?.title || "",
     metaDescription: article?.metaDescription || article?.excerpt || "",
     status: article?.status || "draft",
@@ -285,6 +289,16 @@ export function AdminConsole({ initialArticles = [], initialSession = null, fire
               <label htmlFor="tags">Tags</label>
               <input id="tags" className="input" value={form.tags} onChange={(event) => handleFieldChange("tags", event.target.value)} placeholder="language, hierarchy, symbolism" />
             </div>
+          </div>
+          <div className="field">
+            <label htmlFor="searchTerms">Search keywords</label>
+            <input
+              id="searchTerms"
+              className="input"
+              value={form.searchTerms}
+              onChange={(event) => handleFieldChange("searchTerms", event.target.value)}
+              placeholder="aigoo, 아이고, 선배, nunchi, 눈치"
+            />
           </div>
           <div className="field">
             <label htmlFor="metaDescription">Meta description</label>

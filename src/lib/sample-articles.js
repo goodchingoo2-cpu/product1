@@ -25,6 +25,7 @@ If a mother says **aigoo** while touching someone's face, it often carries conce
 
 Subtitles usually prioritize plot clarity. But **aigoo** often communicates social mood, not factual meaning. That is why a scene can feel emotionally richer in Korean than in translation.`,
     tags: ["language", "emotion", "subtitles"],
+    searchTerms: ["aigoo", "아이고", "아이고 뜻", "탄식", "감탄사"],
     metaTitle: "What 'Aigoo' Means in Korean Dramas",
     metaDescription:
       "Learn how 'aigoo' shifts in tone, social meaning, and emotional weight across Korean drama scenes.",
@@ -58,6 +59,7 @@ When a character hesitates before speaking to a **sunbae**, the pause is not ran
 
 If subtitles reduce **sunbae** to a name or "senior," viewers can miss why one character sounds careful while another sounds confidently informal.`,
     tags: ["hierarchy", "school", "workplace"],
+    searchTerms: ["sunbae", "선배", "선후배", "한국 위계", "호칭"],
     metaTitle: "Why 'Sunbae' Means More Than Senior",
     metaDescription:
       "Understand the social force of 'sunbae' in Korean schools, offices, and K-drama relationships.",
@@ -94,6 +96,7 @@ If a guest hesitates before stepping in and then aligns their shoes perfectly, t
 
 The scene is rarely about footwear itself. It is about manners, boundaries, and how people present themselves when crossing into intimate space.`,
     tags: ["symbolism", "home", "visual-cues"],
+    searchTerms: ["신발", "현관", "집 예절", "문 앞 신발", "한국 집 문화"],
     metaTitle: "Why Shoes at the Door Matter in Korean Scenes",
     metaDescription:
       "Learn how a simple entrance detail communicates respect, anxiety, and belonging in K-dramas.",
@@ -128,6 +131,7 @@ Shared meals in Korean media are loaded with age order, family tension, and expe
 
 The meaning often sits in timing and behavior, not in words. That is why a scene may feel strangely intense even when the dialogue looks simple.`,
     tags: ["family", "social-cues", "nunchi"],
+    searchTerms: ["nunchi", "눈치", "눈치 보다", "사회적 눈치", "분위기 파악"],
     metaTitle: "What Nunchi Means in Korean Dinner Scenes",
     metaDescription:
       "See how nunchi shapes tension, politeness, and emotional timing in Korean family and workplace scenes.",
@@ -164,6 +168,7 @@ Do not assume the phrase is always flirtatious. Sometimes it is exactly about fo
 
 Literal translation keeps the words but not the cultural memory attached to them.`,
     tags: ["language", "romance", "subtext"],
+    searchTerms: ["ramyeon", "라면", "라면 먹고 갈래", "로맨스 대사", "썸"],
     metaTitle: "Why a Ramyeon Invitation Feels Loaded in K-Drama",
     metaDescription:
       "Understand when a casual offer of ramyeon becomes romantic or suggestive in Korean media.",
@@ -193,6 +198,7 @@ In formal group settings, pouring drinks can reflect attentiveness to hierarchy 
 
 The discomfort is often social rather than personal. The scene can communicate values about etiquette without saying them aloud.`,
     tags: ["office", "ritual", "hierarchy"],
+    searchTerms: ["술 따르기", "회식", "직장 예절", "잔 따르기", "한국 술자리"],
     metaTitle: "Why Pouring Drinks Matters in Korean Office Scenes",
     metaDescription:
       "See how drink-pouring rituals reveal hierarchy and social tension in Korean workplace scenes.",

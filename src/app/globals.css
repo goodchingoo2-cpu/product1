@@ -522,3 +522,74 @@ main {
     min-height: 82px;
   }
 }
+
+.search-layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.search-hero {
+  display: grid;
+  gap: 1rem;
+}
+
+.search-panel-flat {
+  margin-top: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.search-summary {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1rem 1.2rem;
+}
+
+.search-summary > div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.search-summary-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.search-summary strong {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  letter-spacing: -0.02em;
+}
+
+.search-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.search-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(159, 79, 47, 0.15);
+  background: rgba(255, 249, 244, 0.72);
+  color: var(--foreground);
+  font-size: 0.92rem;
+}
+
+.search-chip:hover {
+  background: rgba(239, 222, 212, 0.82);
+}
+
+@media (min-width: 700px) {
+  .search-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+}

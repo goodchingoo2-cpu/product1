@@ -30,6 +30,7 @@ function serializeArticle(id, data) {
     excerpt: data.excerpt || "",
     content: data.content || "",
     tags: normalizeArray(data.tags),
+    searchTerms: normalizeArray(data.searchTerms),
     metaTitle: data.metaTitle || data.title || "",
     metaDescription: data.metaDescription || data.excerpt || "",
     status: data.status || "draft",
@@ -84,7 +85,8 @@ export async function searchPublishedArticles(query) {
       article.excerpt,
       article.content,
       article.metaDescription,
-      article.tags.join(" ")
+      article.tags.join(" "),
+      article.searchTerms.join(" ")
     ]
       .join(" ")
       .toLowerCase();
@@ -121,6 +123,7 @@ export async function saveArticle(id, payload) {
     excerpt: payload.excerpt,
     content: payload.content,
     tags: normalizeArray(payload.tags),
+    searchTerms: normalizeArray(payload.searchTerms),
     metaTitle: payload.metaTitle,
     metaDescription: payload.metaDescription,
     status: payload.status,
