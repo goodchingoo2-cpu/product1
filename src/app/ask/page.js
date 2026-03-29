@@ -1,14 +1,5 @@
-import { AskConsole } from "@/components/AskConsole";
+import { redirect } from "next/navigation";
 
-export const metadata = {
-  title: "Ask AI",
-  description: "Ask questions about Korean cultural context using only the articles published on this site."
-};
-
-export default function AskPage() {
-  return (
-    <div className="container section">
-      <AskConsole />
-    </div>
-  );
+export default function AskRedirectPage() {
+  redirect("/search");
 }

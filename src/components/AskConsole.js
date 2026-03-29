@@ -1,17 +1,24 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import Link from "next/link";
 import { askModes, askTestPrompts, defaultAskMode } from "@/lib/ask-config";
 
 const modeList = Object.values(askModes);
 
-export function AskConsole() {
-  const [question, setQuestion] = useState("");
+export function AskConsole({
+  initialQuestion = "",
+  eyebrow = "AI Search",
+  title = "Ask in English or Korean.",
+  description = "This answer box uses only this site's articles as source material. If the site does not contain enough evidence, it should say so instead of guessing.",
+  autoRun = false
+}) {
+  const [question, setQuestion] = useState(initialQuestion);
   const [mode, setMode] = useState(defaultAskMode);
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const [isPending, startTransition] = useTransition();
+  const hasAutoRunRef = useRef(false);
 
   function runQuestion(nextQuestion, nextMode) {
     setError("");
@@ -39,6 +46,16 @@ export function AskConsole() {
     });
   }
 
+  useEffect(
+    function () {
+      const trimmed = initialQuestion.trim();
+      if (!autoRun || !trimmed || hasAutoRunRef.current) return;
+      hasAutoRunRef.current = true;
+      runQuestion(trimmed, mode);
+    },
+    [autoRun, initialQuestion, mode]
+  );
+
   function handleSubmit(event) {
     event.preventDefault();
     const trimmed = question.trim();
@@ -54,12 +71,9 @@ export function AskConsole() {
   return (
     <div className="ask-layout">
       <section className="panel ask-panel">
-        <span className="eyebrow">AI Ask</span>
-        <h1>Ask in English or Korean.</h1>
-        <p>
-          This answer box uses only this site's articles as source material. If the site does not
-          contain enough evidence, it should say so instead of guessing.
-        </p>
+        <span className="eyebrow">{eyebrow}</span>
+        <h1>{title}</h1>
+        <p>{description}</p>
 
         <div className="ask-mode-grid">
           {modeList.map(function (item) {

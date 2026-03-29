@@ -9,7 +9,7 @@ export function SearchBar({ initialQuery = "", compact = false }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const target = query.trim() ? `/search?q=${encodeURIComponent(query.trim())}` : "/search";
+    const target = query.trim() ? "/search?q=" + encodeURIComponent(query.trim()) : "/search";
     router.push(target);
   }
 
@@ -17,14 +17,14 @@ export function SearchBar({ initialQuery = "", compact = false }) {
     <form className="search-form" onSubmit={handleSubmit}>
       <div className={compact ? "search-row" : "search-form"}>
         <input
-          aria-label="Search articles"
+          aria-label="Ask AI a question"
           className="input"
-          placeholder="Search Korean phrases, customs, or scene meanings"
+          placeholder="Ask about a Korean line, cultural concept, or scene meaning"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
         <button className="button" type="submit">
-          Search
+          Ask AI
         </button>
       </div>
     </form>
