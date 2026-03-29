@@ -13,6 +13,7 @@ export function Header() {
           <NavLink href="/korean-lines">Korean Lines</NavLink>
           <NavLink href="/cultural-concepts">Cultural Concepts</NavLink>
           <NavLink href="/scene-meanings">Scene Meanings</NavLink>
+          <NavLink href="/ask">Ask AI</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </nav>

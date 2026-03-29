@@ -7,6 +7,7 @@ Minimal Next.js content site for explaining Korean cultural context in K-content
 - Home page with category sections and featured articles
 - Category hubs for Korean lines, cultural concepts, and scene meanings
 - Search page and clean article URLs
+- Ask AI page powered by OpenAI Responses API using this site's articles as context
 - About, Contact, Privacy Policy, and Terms pages
 - Firebase Authentication based admin session
 - Firestore-backed article storage
@@ -27,7 +28,9 @@ npm install
 3. Enable a Firebase Authentication provider for your admin account.
    This project uses Google sign-in from the admin screen and checks `ADMIN_EMAILS`.
 
-4. Start the app:
+4. Add `OPENAI_API_KEY` if you want the Ask AI feature to work.
+
+5. Start the app:
 
 ```bash
 npm run dev
@@ -63,3 +66,14 @@ Expected document shape:
 - Without Firebase configuration, the site still renders with bundled sample articles.
 - Admin APIs require a verified Firebase session cookie and an email listed in `ADMIN_EMAILS`.
 - Search checks title, excerpt, content, tags, meta description, and `searchTerms`.
+
+
+## Ask AI
+
+The minimal AI Q&A feature uses OpenAI Responses API. It first searches this site's published articles, then sends only the matched article text to the model.
+
+This means:
+
+- Answers are grounded in site content only
+- No OpenAI vector store is required in this minimal version
+- Cost comes from model token usage only
