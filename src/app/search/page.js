@@ -1,8 +1,8 @@
 import { AskConsole } from "@/components/AskConsole";
 
 export const metadata = {
-  title: "Search",
-  description: "Ask AI questions about Korean cultural context using only this site's articles."
+  title: "ASK",
+  description: "Ask questions about Korean cultural context using only this site's articles."
 };
 
 export default async function SearchPage(props) {
@@ -14,8 +14,8 @@ export default async function SearchPage(props) {
       <AskConsole
         initialQuestion={query}
         autoRun={Boolean(query.trim())}
-        eyebrow="AI Search"
-        title={query.trim() ? "AI answer for your search" : "Search with AI, not keywords."}
+        eyebrow="ASK"
+        title={query.trim() ? "Answer for your search" : "ASK, not keywords."}
         description={
           query.trim()
             ? "Your search is treated as a question, and the answer is generated only from this site's articles."

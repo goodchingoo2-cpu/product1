@@ -8,7 +8,7 @@ const modeList = Object.values(askModes);
 
 export function AskConsole({
   initialQuestion = "",
-  eyebrow = "AI Search",
+  eyebrow = "ASK",
   title = "Ask in English or Korean.",
   description = "This answer box uses only this site's articles as source material. If the site does not contain enough evidence, it should say so instead of guessing.",
   autoRun = false
@@ -105,7 +105,7 @@ export function AskConsole({
           />
           <div className="ask-actions">
             <button className="button" type="submit" disabled={isPending || !question.trim()}>
-              {isPending ? "Thinking..." : "Ask AI"}
+              {isPending ? "Thinking..." : "ASK"}
             </button>
           </div>
         </form>
@@ -155,7 +155,7 @@ export function AskConsole({
         <section className="ask-result-grid">
           <article className="panel ask-answer">
             <div className="label-row">
-              <span className="label">AI answer</span>
+              <span className="label">Answer</span>
               <span className="tag">{result.sources.length} sources</span>
               <span className="tag">{result.mode}</span>
             </div>

@@ -17,14 +17,14 @@ export function SearchBar({ initialQuery = "", compact = false }) {
     <form className="search-form" onSubmit={handleSubmit}>
       <div className={compact ? "search-row" : "search-form"}>
         <input
-          aria-label="Ask AI a question"
+          aria-label="Ask a question"
           className="input"
           placeholder="Ask about a Korean line, cultural concept, or scene meaning"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
         <button className="button" type="submit">
-          Ask AI
+          ASK
         </button>
       </div>
     </form>
