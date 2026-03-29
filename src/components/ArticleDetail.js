@@ -1,11 +1,10 @@
-import { ArticleList } from "@/components/ArticleList";
 import { formatDate } from "@/lib/format";
 import { renderSimpleMarkdown } from "@/lib/markdown";
 
-export function ArticleDetail({ article, category, related }) {
+export function ArticleDetail({ article, category }) {
   return (
-    <div className="container section article-layout">
-      <article className="article-shell">
+    <div className="container section article-layout article-layout-single">
+      <article className="article-shell article-shell-wide">
         <header className="article-header">
           <span className="eyebrow">{category.name}</span>
           <h1>{article.title}</h1>
@@ -23,16 +22,6 @@ export function ArticleDetail({ article, category, related }) {
         </header>
         <div className="rich-text">{renderSimpleMarkdown(article.content)}</div>
       </article>
-      <aside className="aside-stack">
-        <div className="story-panel">
-          <h3>Why this category matters</h3>
-          <p>{category.description}</p>
-        </div>
-        <div className="story-panel">
-          <h3>Related reads</h3>
-          <ArticleList articles={related} emptyTitle="No related reads yet." />
-        </div>
-      </aside>
     </div>
   );
 }

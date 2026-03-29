@@ -4,7 +4,8 @@ import { findPublishedArticle, getPublishedArticlesByCategory } from "@/lib/arti
 import { getCategory } from "@/lib/site";
 
 export async function generateMetadata(props) {
-  const article = await findPublishedArticle("scene-meanings", props.params.slug);
+  const params = await props.params;
+  const article = await findPublishedArticle("scene-meanings", params.slug);
   if (!article) {
     return { title: "Article not found" };
   }
@@ -25,7 +26,8 @@ export async function generateMetadata(props) {
 }
 
 export default async function SceneMeaningArticlePage(props) {
-  const article = await findPublishedArticle("scene-meanings", props.params.slug);
+  const params = await props.params;
+  const article = await findPublishedArticle("scene-meanings", params.slug);
   if (!article) notFound();
 
   const related = (await getPublishedArticlesByCategory("scene-meanings"))
