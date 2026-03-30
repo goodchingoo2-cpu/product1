@@ -728,6 +728,34 @@ main {
   cursor: default;
 }
 
+.ask-compact-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.ask-compact-panel {
+  padding: 1rem;
+}
+
+.ask-banner {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.ask-banner h2 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.ask-banner-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
 .ask-sidebar {
   display: grid;
   gap: 1rem;
